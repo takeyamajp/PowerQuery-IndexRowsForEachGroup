@@ -1,4 +1,7 @@
 # PowerQuery-IndexRowsForEachGroup
+`English`  
+[`Japanese (日本語)`](https://github.com/takeyamajp/PowerQuery-IndexRowsForEachGroup/blob/main/README.ja.md)
+
 Star this repository if it is useful for you.  
 These are Power Query functions to assign sequential numbers for each group that everyone wanted but hadn't yet invented.
 
