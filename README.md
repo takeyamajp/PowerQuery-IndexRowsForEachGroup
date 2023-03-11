@@ -1,6 +1,6 @@
 # PowerQuery-IndexRowsForEachGroup
 Star this repository if it is useful for you.  
-This is a library to assign sequential numbers for each group that everyone wanted but hadn't yet invented.
+These are Power Query functions to assign sequential numbers for each group that everyone wanted but hadn't yet invented.
 
 In this library, it is possible to assign sequential numbers in the exact and intended order.  
 Also, This library fully preserves column type information.
