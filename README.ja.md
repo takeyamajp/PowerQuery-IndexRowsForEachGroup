@@ -9,19 +9,19 @@
 このライブラリーでは、正確に思った通りの並び順で連番を振ることが出来ます。  
 さらに、このライブラリーは列の型情報を完全に保持します。
 
-- [Sample Table](#sample-table)
-- [Parameters](#parameters)
+- [サンプルテーブル](#サンプルテーブル)
+- [パラメータ説明](#パラメータ説明)
   - [table](#table)
   - [key](#key)
   - [comparisonCriteria](#comparisoncriteria)
   - [newColumnName](#newcolumnname)
-- [Custom Functions](#custom-functions)
-  - [IndexRowsForEachGroup](#indexrowsforeachgroup)
-  - [CountRowsForEachGroup](#countrowsforeachgroup)
-  - [IndexGroups](#indexgroups)
-  - [CountGroups](#countgroups)
-  - [IndexRows](#indexrows)
-  - [CountRows](#countrows)
+- [カスタム関数](#カスタム関数)
+  - [IndexRowsForEachGroup](#indexrowsforeachgroupグループ毎に指定した並び順で連番を振ります)
+  - [CountRowsForEachGroup](#countrowsforeachgroupグループ毎の行数をカウントします)
+  - [IndexGroups](#indexgroups指定した並び順でグループに連番を振ります)
+  - [CountGroups](#countgroupsグループ数をカウントします)
+  - [IndexRows](#indexrows各行に連番を振ります)
+  - [CountRows](#countrows行数をカウントします)
 
 # サンプルテーブル
 ~~~
