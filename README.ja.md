@@ -15,7 +15,7 @@
   - [key](#key)
   - [comparisonCriteria](#comparisoncriteria)
   - [newColumnName](#newcolumnname)
-- [カスタム関数](#カスタム関数)
+- [カスタム関数（構文と定義）](#カスタム関数構文と定義)
   - [IndexRowsForEachGroup](#indexrowsforeachgroupグループ毎に指定した並び順で連番を振ります)
   - [CountRowsForEachGroup](#countrowsforeachgroupグループ毎の行数をカウントします)
   - [IndexGroups](#indexgroups指定した並び順でグループに連番を振ります)
@@ -74,7 +74,7 @@ in
 追加される列の名前です。省略した場合は `@INDEX` or `@COUNT` になります。
 
 
-# カスタム関数
+# カスタム関数（構文と定義）
 
 ### IndexRowsForEachGroup（グループ毎に、指定した並び順で連番を振ります。）
 IndexRowsForEachGroup(`table` as table, `key` as anynonnull, `comparisonCriteria` as anynonnull, optional `newColumnName` as nullable text) as table
