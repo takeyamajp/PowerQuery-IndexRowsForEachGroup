@@ -8,7 +8,7 @@ These are Power Query functions to assign sequential numbers for each group that
 In this library, it is possible to assign sequential numbers in the exact and intended order.  
 Also, This library fully preserves column type information.
 
-- [Sample Table](#sample-table)
+- [Sample Code](#sample-code)
 - [Parameters](#parameters)
   - [table](#table)
   - [key](#key)
@@ -22,20 +22,30 @@ Also, This library fully preserves column type information.
   - [IndexRows](#indexrows)
   - [CountRows](#countrows)
 
-# Sample Table
+# Sample Code
 ~~~
-= #table(type table[Region = text, Country = text], {
-    {"Asia", "Australia"}, 
-    {"Asia", "China"}, 
-    {"Asia", "India"}, 
-    {"Asia", "Japan"}, 
-    {"Europe", "France"}, 
-    {"Europe", "Germany"}, 
-    {"Europe", "United Kingdom"}, 
-    {"North America", "Canada"}, 
-    {"North America", "United States"}
-})
+let
+    Source = #table(type table[Region = text, Country = text], {
+        {"Asia", "Australia"}, 
+        {"Asia", "China"}, 
+        {"Asia", "India"}, 
+        {"Asia", "Japan"}, 
+        {"Europe", "France"}, 
+        {"Europe", "Germany"}, 
+        {"Europe", "United Kingdom"}, 
+        {"North America", "Canada"}, 
+        {"North America", "United States"}
+    }),
+    Custom1 = IndexRowsForEachGroup(Source, "Region", {"Region", "Country"}, "INDEX1"),
+    Custom2 = CountRowsForEachGroup(Custom1, "Region", "COUNT1"),
+    Custom3 = IndexGroups(Custom2, "Region", {"Region", "Country"}, "INDEX2"),
+    Custom4 = CountGroups(Custom3, "Region", "COUNT2"),
+    Custom5 = IndexRows(Custom4, {"Region", "Country"}, "INDEX3"),
+    Custom6 = CountRows(Custom5, "COUNT3")
+in
+    Custom6
 ~~~
+![Sample Image](sample.png)
 
 # Parameters
 ### table
