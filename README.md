@@ -74,6 +74,7 @@ A new column is added with the specified name. If omitted, it will be `@INDEX` o
 
 
 # Custom Functions (Syntax And Definition)
+To create a custom function, create a Blank Query in the Power Query editor and paste the function definition below into the formula bar.
 
 ### IndexRowsForEachGroup
 IndexRowsForEachGroup(`table` as table, `key` as anynonnull, `comparisonCriteria` as anynonnull, optional `newColumnName` as nullable text) as table
