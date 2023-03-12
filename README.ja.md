@@ -75,6 +75,7 @@ in
 
 
 # カスタム関数（構文と定義）
+カスタム関数を作成するには、Power Query エディターで空のクエリを作成して、以下の関数定義を数式バーに貼り付けてください。
 
 ### IndexRowsForEachGroup（グループ毎に、指定した並び順で連番を振ります。）
 IndexRowsForEachGroup(`table` as table, `key` as anynonnull, `comparisonCriteria` as anynonnull, optional `newColumnName` as nullable text) as table
