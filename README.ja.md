@@ -9,7 +9,7 @@
 このライブラリーでは、正確に思った通りの並び順で連番を振ることが出来ます。  
 さらに、このライブラリーは列の型情報を完全に保持します。
 
-- [サンプルテーブル](#サンプルテーブル)
+- [サンプルコード](#サンプルコード)
 - [パラメータ説明](#パラメータ説明)
   - [table](#table)
   - [key](#key)
@@ -23,20 +23,30 @@
   - [IndexRows](#indexrows各行に連番を振ります)
   - [CountRows](#countrows行数をカウントします)
 
-# サンプルテーブル
+# サンプルコード
 ~~~
-= #table(type table[Region = text, Country = text], {
-    {"Asia", "Australia"}, 
-    {"Asia", "China"}, 
-    {"Asia", "India"}, 
-    {"Asia", "Japan"}, 
-    {"Europe", "France"}, 
-    {"Europe", "Germany"}, 
-    {"Europe", "United Kingdom"}, 
-    {"North America", "Canada"}, 
-    {"North America", "United States"}
-})
+let
+    Source = #table(type table[Region = text, Country = text], {
+        {"Asia", "Australia"}, 
+        {"Asia", "China"}, 
+        {"Asia", "India"}, 
+        {"Asia", "Japan"}, 
+        {"Europe", "France"}, 
+        {"Europe", "Germany"}, 
+        {"Europe", "United Kingdom"}, 
+        {"North America", "Canada"}, 
+        {"North America", "United States"}
+    }),
+    Custom1 = IndexRowsForEachGroup(Source, "Region", {"Region", "Country"}, "INDEX1"),
+    Custom2 = CountRowsForEachGroup(Custom1, "Region", "COUNT1"),
+    Custom3 = IndexGroups(Custom2, "Region", {"Region", "Country"}, "INDEX2"),
+    Custom4 = CountGroups(Custom3, "Region", "COUNT2"),
+    Custom5 = IndexRows(Custom4, {"Region", "Country"}, "INDEX3"),
+    Custom6 = CountRows(Custom5, "COUNT3")
+in
+    Custom6
 ~~~
+![Sample Image](sample.png)
 
 # パラメータ説明
 ### table
