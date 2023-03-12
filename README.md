@@ -14,7 +14,7 @@ Also, This library fully preserves column type information.
   - [key](#key)
   - [comparisonCriteria](#comparisoncriteria)
   - [newColumnName](#newcolumnname)
-- [Custom Functions](#custom-functions)
+- [Custom Functions (Syntax And Definition)](#custom-functions-syntax-and-definition)
   - [IndexRowsForEachGroup](#indexrowsforeachgroup)
   - [CountRowsForEachGroup](#countrowsforeachgroup)
   - [IndexGroups](#indexgroups)
@@ -73,7 +73,7 @@ When specifying in multiple columns.
 A new column is added with the specified name. If omitted, it will be `@INDEX` or `@COUNT`.
 
 
-# Custom Functions
+# Custom Functions (Syntax And Definition)
 
 ### IndexRowsForEachGroup
 IndexRowsForEachGroup(`table` as table, `key` as anynonnull, `comparisonCriteria` as anynonnull, optional `newColumnName` as nullable text) as table
