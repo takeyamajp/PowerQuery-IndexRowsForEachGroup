@@ -23,6 +23,9 @@ Also, This library fully preserves column type information.
   - [CountRows](#countrows)
 
 # Sample Code
+[Register the custom functions first.](#custom-functions-syntax-and-definition)  
+To execute the sample code, create a Blank Query in Power Query Editor and open it in Advanced Editor.  
+And replace the existing code with the code below.
 ~~~
 let
     Source = #table(type table[Region = text, Country = text], {
@@ -74,7 +77,7 @@ A new column is added with the specified name. If omitted, it will be `@INDEX` o
 
 
 # Custom Functions (Syntax And Definition)
-To create a custom function, create a Blank Query in the Power Query editor and paste the function definition below into the formula bar.
+To create a custom function, create a Blank Query in Power Query Editor and paste the function definition below into Formula Bar.
 
 ### IndexRowsForEachGroup
 IndexRowsForEachGroup(`table` as table, `key` as anynonnull, `comparisonCriteria` as anynonnull, optional `newColumnName` as nullable text) as table
