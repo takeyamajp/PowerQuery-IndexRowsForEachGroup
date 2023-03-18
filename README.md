@@ -5,7 +5,7 @@
 Star this repository if it is useful for you.  
 
 In this library, it is possible to assign sequential numbers in the exact and intended order.  
-Also, This library fully preserves column type information.
+Also, This library fully preserves column types.
 
 - [Sample Code](#sample-code)
 - [Parameters](#parameters)
