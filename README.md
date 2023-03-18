@@ -56,10 +56,10 @@ The table to be processed.
 ### key
 The specified key determines which group to process.
 
-When specifying with a single key.  
+When specifying in a single key.  
 `"Region"`
 
-When specifying with multiple keys.  
+When specifying in multiple keys.  
 `{"Region", "Country"}`
 
 ### comparisonCriteria
